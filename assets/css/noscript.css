@@ -8,6 +8,7 @@
 
 	.spotlights > section > .image:before {
 		opacity: 0 !important;
+		cursor: none !important;
 	}
 
 	.spotlights > section > .content > .inner {
@@ -16,6 +17,7 @@
 		-ms-transform: none !important;
 		transform: none !important;
 		opacity: 1 !important;
+		cursor: none !important;
 	}
 
 /* Wrapper */
@@ -26,12 +28,14 @@
 		-webkit-transform: none !important;
 		-ms-transform: none !important;
 		transform: none !important;
+		cursor: none !important;
 	}
 
 /* Sidebar */
 
 	#sidebar > .inner {
 		opacity: 1 !important;
+		cursor: none !important;
 	}
 
 	#sidebar nav > ul > li {
@@ -40,4 +44,5 @@
 		-ms-transform: none !important;
 		transform: none !important;
 		opacity: 1 !important;
+		cursor: none !important;
 	}
