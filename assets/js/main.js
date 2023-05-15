@@ -3,6 +3,41 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+
+/*Effect for Name H1*/
+function nameEffect() {
+
+	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	let interval = null;
+
+	const h1 = document.querySelector("h1");
+	const originalText = h1.innerText;
+	h1.dataset.value = originalText;
+
+	let iteration = 0;
+
+	interval = setInterval(() => {
+		h1.innerText = h1.innerText
+			.split("")
+			.map((letter, index) => {
+				if (index < iteration) {
+					return h1.dataset.value[index];
+				}
+				return letters[Math.floor(Math.random() * 26)];
+			})
+			.join("");
+
+		if (iteration >= h1.dataset.value.length) {
+			clearInterval(interval);
+		}
+
+		iteration += 1 / 3;
+	}, 40);
+
+
+}
+
+
 /**Effect for sidebar */
 document.addEventListener("DOMContentLoaded", () => {
 	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -220,43 +255,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}, 30);
 	});
 });
-
-
-/*Effect for Name H1*/
-function nameEffect() {
-
-	const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	let interval = null;
-
-	const h1 = document.querySelector("h1");
-	const originalText = h1.innerText;
-	h1.dataset.value = originalText;
-
-	let iteration = 0;
-
-	interval = setInterval(() => {
-		h1.innerText = h1.innerText
-			.split("")
-			.map((letter, index) => {
-				if (index < iteration) {
-					return h1.dataset.value[index];
-				}
-				return letters[Math.floor(Math.random() * 26)];
-			})
-			.join("");
-
-		if (iteration >= h1.dataset.value.length) {
-			clearInterval(interval);
-		}
-
-		iteration += 1 / 3;
-	}, 40);
-
-
-}
-
-
-
 
 
 
