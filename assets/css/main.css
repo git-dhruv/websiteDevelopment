@@ -99,6 +99,7 @@ mark,
 audio,
 video {
 	padding: 0;
+
 	border: 0;
 	font-size: 100%;
 	vertical-align: baseline;
@@ -1395,6 +1396,7 @@ hr.major {
 	.row.gtr-0.gtr-uniform>* {
 		padding-top: 0em;
 	}
+
 
 	.row.gtr-25 {
 		margin-top: 0;
