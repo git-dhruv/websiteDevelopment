@@ -360,7 +360,7 @@ if (!hasRun) {
 	const next = () => {
 		fx.setText(hi[counter]).then(() => {
 			if (counter < hi.length) {
-				setTimeout(next, 2000);
+				setTimeout(next, 1);
 			}
 		});
 		el.style.fontFamily = 'Spacer';
@@ -383,9 +383,9 @@ function displayButton() {
 	const ele = document.querySelector('.glowing-btn');
 	ele.style.display = 'block';
 }
-setTimeout(displayName, 3200);
-setTimeout(displayDescription, 4000);
-setTimeout(displayButton, 9000);
+setTimeout(displayName,1500);
+setTimeout(displayDescription, 2500);
+setTimeout(displayButton, 3500);
 (function ($) {
 
 	var $window = $(window),
