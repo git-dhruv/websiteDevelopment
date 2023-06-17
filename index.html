@@ -132,7 +132,7 @@
 		<!-- Education -->
 		<section id="education" class="wrapper style2 spotlights">
 			<section>
-				<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
+				<a href="#" class="image"><img src="images/pennLogo.png" alt="" data-position="center center" /></a>
 				<div class="content">
 					<div class="inner">
 						<h2>Sed ipsum dolor</h2>
@@ -360,6 +360,19 @@
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/cursor.js"></script>
 	<script src="assets/js/scrollbar.js"></script>
+
+	<script>
+		const backgrounds = ['background1.jpg', 'background2.jpg'];
+		let currentIndex = 0;
+
+		function changeBackground() {
+			const slidingBackground = document.getElementById('intro');
+			slidingBackground.style.backgroundImage = `url('${backgrounds[currentIndex]}')`;
+			currentIndex = (currentIndex + 1) % backgrounds.length;
+		}
+		setInterval(changeBackground, 5000); // Change background every 5 seconds
+	</script>
+
 </body>
 
 </html>
